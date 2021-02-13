@@ -3,7 +3,7 @@ import styles from './header.sass'
 
 const Header = () => {
   return <>
-          <h1 className='Header' >Weather App</h1>
+          <h1 className='header' >Weather App</h1>
          </>
 }
 

@@ -1,8 +1,7 @@
 import React from 'react'
+import styles from './ShowTemp.sass'
 
-
-
-const ShowTemp = (props) => {
+export const ShowTemp = (props) => {
   const sum = (temp) => {
     console.log(temp)
     if (temp === undefined) {
@@ -13,10 +12,9 @@ const ShowTemp = (props) => {
   }
   
   return   (
-    <div>
-      <p>{sum(props.temp)}</p>
+    <div className='dress' >
+      <p className='pp' > {sum(props.temp)}°С</p>
     </div>
   )
 }
 
-export default ShowTemp

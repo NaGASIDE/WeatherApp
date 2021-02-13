@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
-import ShowTemp from './showTemp'
+import {ShowTemp} from '../ShowTemp/showTemp'
+import styles from './cityName.sass'
 
 export const CityName = () => {
 
@@ -9,10 +10,10 @@ export const CityName = () => {
 
   return ( 
     <div className='cityName' >
-        <input  onChange={(e) => {
+        <input className='input' onChange={(e) => {
           setstate(e.target.value)
         }}/>
-        <button onClick={(e) => {
+        <button className='button' onClick={(e) => {
           fetch(`http://api.openweathermap.org/data/2.5/weather?q=${state}&appid=cf0328590b7fd3dec8b9bb899f788ffc`)
           .then((e) =>  e.json().then((r) => {
             if (r.main === undefined) {
@@ -22,7 +23,7 @@ export const CityName = () => {
             }
 
           }))
-        }} >Setch</button>
+        }} >Search</button>
         
         <ShowTemp temp={temp} />
     </div>
