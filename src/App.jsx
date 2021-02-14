@@ -1,19 +1,11 @@
 import React from 'react'
-import styles from './App.sass'
-import Header from './Header'
-import {CityName} from './components/CityName/cityName'
+import './App.sass'
+import {CityName} from './components/CityName/CityName'
 
 export const App = () => {
   return (
-   <div className='main' >
-   <header>
-      <Header />
+   <div className='main'>
       <CityName />
-   </header>
-   
-      
-   
-   <footer><p>Page created by nagaside</p></footer>
    </div>
   )
 }

@@ -1,19 +1,13 @@
 import React from 'react'
-import styles from './ShowTemp.sass'
+import './ShowTemp.sass'
 
-export const ShowTemp = (props) => {
-  const sum = (temp) => {
-    console.log(temp)
-    if (temp === undefined) {
-      return `Город не найден.`
-    } else {
-      return temp
-    }
-  }
-  
+export const ShowTemp = ({temp}) => {
+
+  const graduc = temp !== 'Write any city' ? `${temp}*C` : temp
+
   return   (
-    <div className='dress' >
-      <p className='pp' > {sum(props.temp)}°С</p>
+    <div className='dress'>
+      <p className='pp'>{graduc}</p>  
     </div>
   )
 }

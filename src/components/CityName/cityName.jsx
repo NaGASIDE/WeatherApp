@@ -1,33 +1,31 @@
+import axios from 'axios'
 import React from 'react'
-import {useState} from 'react'
-import {ShowTemp} from '../ShowTemp/showTemp'
-import styles from './cityName.sass'
+import { useState } from 'react'
+import { ShowTemp } from '../ShowTemp/ShowTemp'
+import styles from './CityName.module.sass'
 
 export const CityName = () => {
+  const [input, setInput] = useState('')
+  const [temp, setTemp] = useState('Write any city')
 
-  const [state, setstate] = useState(``)
-  const [temp, setTemp] = useState(``)
+  const  onClickButton = async () => {
+try {
+  const {data} = !!input.trim() ? await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=cf0328590b7fd3dec8b9bb899f788ffc`) : {data:'Please write any city'}
+  setTemp((Math.floor(data.main.temp - 273, 15)))
+  
+} catch (error) {
+  setTemp('Write any city')
+}}
+  const onChangeInput = (e)=> setInput(e.target.value)
+  
+  return (
+    <div className={styles.cityname} >
+      <input className={styles.input} value={input} onChange={onChangeInput} />
+      <button className={styles.button} onClick={onClickButton} >Search</button>
 
-  return ( 
-    <div className='cityName' >
-        <input className='input' onChange={(e) => {
-          setstate(e.target.value)
-        }}/>
-        <button className='button' onClick={(e) => {
-          fetch(`http://api.openweathermap.org/data/2.5/weather?q=${state}&appid=cf0328590b7fd3dec8b9bb899f788ffc`)
-          .then((e) =>  e.json().then((r) => {
-            if (r.main === undefined) {
-              setTemp(`Город не найден.`)
-            } else {
-              setTemp(Math.floor(r.main.temp - 273,15))
-            }
-
-          }))
-        }} >Search</button>
-        
-        <ShowTemp temp={temp} />
+      <ShowTemp temp={temp} />
     </div>
-  ) 
+  )
 }
 
 
