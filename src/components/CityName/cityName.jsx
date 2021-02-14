@@ -10,8 +10,9 @@ export const CityName = () => {
 
   const  onClickButton = async () => {
 try {
-  const {data} = !!input.trim() ? await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=cf0328590b7fd3dec8b9bb899f788ffc`) : {data:'Please write any city'}
+  const {data} = !!input.trim() ? await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=cf0328590b7fd3dec8b9bb899f788ffc`) : {data:'please write city'}
   setTemp((Math.floor(data.main.temp - 273, 15)))
+  console.log(data)
   
 } catch (error) {
   setTemp('Write any city')
@@ -20,9 +21,10 @@ try {
   
   return (
     <div className={styles.cityname} >
-      <input className={styles.input} value={input} onChange={onChangeInput} />
-      <button className={styles.button} onClick={onClickButton} >Search</button>
-
+      <div>
+        <input className={styles.input} value={input} onChange={onChangeInput} />
+        <button className={styles.button} onClick={onClickButton} >Search</button>
+      </div>
       <ShowTemp temp={temp} />
     </div>
   )

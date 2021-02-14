@@ -3,11 +3,11 @@ import './ShowTemp.sass'
 
 export const ShowTemp = ({temp}) => {
 
-  const graduc = temp !== 'Write any city' ? `${temp}*C` : temp
+  const graduc = temp !== 'Write any city' ? `${temp}°C` : temp
 
   return   (
     <div className='dress'>
-      <p className='pp'>{graduc}</p>  
+      <p className='paragraph'>{graduc}</p>  
     </div>
   )
 }
