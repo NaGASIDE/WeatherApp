@@ -7,9 +7,7 @@ export const App = () => {
   return (
    <div className='main'>
      <header className='header' >Weather App</header>
-     <Sun />
       <CityName />
-      
       <div className="img" ></div>
    </div>
   )
