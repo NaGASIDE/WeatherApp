@@ -1,15 +1,14 @@
 import React from 'react'
+import { Time } from './components/Time/Time'
+import { Header } from './components/Header/Header'
 import './App.sass'
-import {CityName} from './components/CityName/CityName'
-import {Sun} from "./components/Sun/Sun"
+
 
 export const App = () => {
   return (
-   <div className='main'>
-     <header className='header' >Weather App</header>
-      <CityName />
-      <div className="img" ></div>
-   </div>
+    <div className='app' >
+      <Time />
+      <Header />
+    </div>
   )
 }
-
