@@ -5,11 +5,11 @@ import './style.sass'
 
 export const Header = () => {
   return (
-    <div>
+    <div className='header' >
       <button className='header-button' >
         <AiOutlinePlus/>
       </button>
-      <h3 className='header-title' >CityName</h3>
+      <h3 className='header-title' >Los Angeles</h3>
       <button className='header-button' >
         <FiMoreVertical/>
       </button>
