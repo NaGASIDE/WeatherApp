@@ -7,9 +7,10 @@ export const Days = () => {
 
   return (
     <div className='days' >
-      <Day />
-      <Day />
-      <Day />
+      <Day data='Today' />
+      <Day data='Tomorrow' />
+      <Day data='Day after tomorrow' />
+      
       <Link to='/five-days' >
         <button className='days-button'>
           Прогноз на 5 дней

@@ -6,6 +6,8 @@ import { Days } from '../../Days/Days'
 import { DayTemp } from '../../DayTemp/DayTemp'
 import { DayData } from '../../DayData/DayData'
 import { AQIBlock } from '../../AQIBlock/AQIBlock'
+import { useDispatch } from 'react-redux'
+import { cityActions } from '../../../store/City/action' 
 import './style.sass'
 
 export const Home = () => {

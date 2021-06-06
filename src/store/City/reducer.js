@@ -6,7 +6,7 @@ export const cityReducer = (state = cities, action) => {
   switch (action.type) {
     case cityActionTypes.ADD_CITY:
       newCities = [...state]
-      newCities.push(action.payload)
+      fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${action.payload.city}&appid=cf0328590b7fd3dec8b9bb899f788ffc`).then((e) => e.json().then((r) => {newCities.push(r)}));
       return newCities
   }
   return state 

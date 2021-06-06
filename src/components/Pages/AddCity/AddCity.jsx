@@ -6,12 +6,15 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { cityActions } from '../../../store/City/action'
 import { v1 as uuid } from 'uuid';
+import { useSelector } from 'react-redux'
 import './style.sass'
 
 export const AddCity = () => {
 
   const [city, setCity] = useState(``)
   const dispatch = useDispatch()
+  const cities = useSelector(state => state.city)
+
 
   return (
     <div className='add-city' >
@@ -39,11 +42,9 @@ export const AddCity = () => {
           }
         }}
         />
-        <City />
-        <City />
-        <City />
-        <City />
-        <City />
+       {cities.map((city) => {
+        return <City key={city.id} city={city} />;
+      })}
     </div>
   )
 }

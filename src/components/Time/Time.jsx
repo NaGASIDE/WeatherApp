@@ -8,7 +8,6 @@ export const Time = () => {
   let minute;
   if ((new Date).getMinutes() < 10) {minute = `0${(new Date).getMinutes()}`}
      else {minute = `${(new Date).getMinutes()}`}
-     console.log(state)
 
   return (
     <div className='time' >

@@ -11,7 +11,7 @@ export const AQIBlock = () => {
       <div className='container' >
         <div>
           <p className='aqi-block-title' >Индекс качества воздуха</p>
-          <p className='aqi-block-text' > <GiThreeLeaves />  28</p>
+          <p className='aqi-block-text' > <GiThreeLeaves />  21</p>
         </div>
         <Link className='aqi-block-more' to='/aqi' >
           <a className='aqi-block-more' >Полный прогноз ИКВ <IoIosArrowForward />  </a>

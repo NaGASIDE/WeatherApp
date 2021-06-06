@@ -13,13 +13,6 @@ export const DayTemp = () => {
       <DayTempItem />
       <DayTempItem />
       <DayTempItem />
-      <DayTempItem />
-      <DayTempItem />
-      <DayTempItem />
-      <DayTempItem />
-      <DayTempItem />
-      <DayTempItem />
-      <DayTempItem />
     </div>
   )
 }
