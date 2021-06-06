@@ -2,13 +2,10 @@ import { createPortal } from "react-dom";
 import React from 'react';
 import './style.sass'
 
-export const Modal = ( {onClose, child}) => {
-  return createPortal((
+export const Modal = ( {onClose,isOpen,children}) => {
+  return isOpen && createPortal((
     <div className='modal' onClick={onClose} >
-      <div>
-        <p>Настройки</p>
-        <p>О разработчике</p>
-      </div>
+      {children}
     </div>
   ), document.getElementById(`portal`))
 }

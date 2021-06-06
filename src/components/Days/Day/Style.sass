@@ -1,17 +1,32 @@
 .day
   display: flex
+  flex-direction: row
   color: #ffff
   font-family: ArealAMU
   margin: 2.5vh
+  .day-icon
+    font-size: 1.5em
+    margin: -0.1em .35em 0em
+  .day-text
+    flex-shrink: 5
+    flex-basis: 14.2em
+  .day-icon
+    color: #fffb00
 
-.day-icon
-  margin-right: 1vh
-  color: #fffb00
-  font-size: 5em
+@media screen and ( max-width: 367px )
+  .day
+    .day-text
+      flex-basis: 13em
 
-.day-temp
-  align-self: flex-end
-  flex-basis: 15em
+@media screen and ( max-width: 348px )
+  .day
+    .day-text
+      flex-basis: 12em
 
-.day-text
-  flex-basis: 20em
+@media screen and ( max-width: 332px )
+  .day
+    .day-text
+      flex-basis: 11em
+  
+  
+

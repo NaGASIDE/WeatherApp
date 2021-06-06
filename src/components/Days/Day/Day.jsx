@@ -1,6 +1,6 @@
 import React from 'react';
 import { GiPlainCircle } from 'react-icons/gi'
-import './Style.sass'
+import './style.sass'
 
 export const Day = () => {
   return (

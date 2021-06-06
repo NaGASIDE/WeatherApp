@@ -1,25 +1,34 @@
 import React, { useState } from 'react'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { FiMoreVertical } from 'react-icons/fi'
+import { Modal } from '../../UIKit/Modal/Modal'
 import { Link } from 'react-router-dom'
-import { Modal } from '../Pages/Home/Modal/Modal'
 import './style.sass'
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
 
-  const [isOpen, SetIsOpen] = useState(false)
-  console.log(isOpen)
+  const toggleModal = ()=>{
+    setIsOpen(prev => !prev)
+  }
 
   return (
     <div className='header' >
-      {isOpen ? <Modal onClose={() => SetIsOpen(!isOpen) } />: ``}
+      <Modal isOpen={isOpen} onClose={toggleModal}>
+      <div className='modal' >
+        <div>
+          <p>Настройки</p>
+          <p>О разработчике</p>
+        </div>
+      </div>
+      </Modal>
       <Link to="/add-city">
         <button className='header-button' >
           <AiOutlinePlus/>
         </button>
       </Link>
       <h3 className='header-title' >Los Angeles</h3>
-      <button className='header-button' onClick={() => SetIsOpen(!isOpen)} >
+      <button className='header-button' onClick={toggleModal} >
         <FiMoreVertical/>
       </button>
     </div>
