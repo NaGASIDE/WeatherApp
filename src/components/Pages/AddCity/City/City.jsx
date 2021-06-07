@@ -4,12 +4,12 @@ import './style.sass'
 
 export const City = ( {city} ) => {
 
-  let temp = city.list[0].main.temp - 273.15
+  let temp = (city.main.temp - 275.15).toFixed()
 
   return (
     <div className='city' >
-      <p className='city-name' >{city.city.name}</p> 
-       <p className='city-temp' >{temp.toFixed(1)}</p>
+      <p className='city-name' >{city.name}</p> 
+       <p className='city-temp' >{temp}&deg;</p>
       <AiOutlineClose className='city-icon'  />
     </div>
   )

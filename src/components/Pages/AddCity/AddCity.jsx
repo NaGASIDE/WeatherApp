@@ -42,8 +42,12 @@ export const AddCity = () => {
           }
         }}
         />
-       {cities.map((city) => {
-        return <City key={city.id} city={city} />;
+       {cities.map((city, i, arr) => {
+          if (arr[i % 2 == 0 ? i : null]) 
+          {
+            return <City key={ (arr[i % 2 == 0 ? i : null]).id} 
+                         city={(arr[i % 2 == 0 ? i : null])} />
+        }
       })}
     </div>
   )

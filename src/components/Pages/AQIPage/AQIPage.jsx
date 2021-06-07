@@ -16,7 +16,7 @@ export const AQIPage = () => {
         <p className='add-city-title' >Индекс качества воздузха</p>
         <div className='aqi-page' >
           <p> <p>21</p> Хороший</p>
-          <p>Air qoality is good. A perfect day for a walk!</p>
+          <p>Air quality is good. A perfect day for a walk!</p>
           <hr/>
           <a>Подробнее  о качестве воздуха </a>
         </div>

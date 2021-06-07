@@ -8,7 +8,7 @@ import './style.sass'
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const cityName = useSelector(state => state.city[0].city.name)
+   const data = useSelector(state => state.city[1])
 
   const toggleModal = ()=>{
     setIsOpen(prev => !prev)
@@ -29,7 +29,7 @@ export const Header = () => {
           <AiOutlinePlus/>
         </button>
       </Link>
-      <h3 className='header-title' >{cityName}</h3>
+      <h3 className='header-title' >{ data ? data.city.name : `Город не указан`}</h3>
       <button className='header-button' onClick={toggleModal} >
         <FiMoreVertical/>
       </button>
