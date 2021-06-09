@@ -6,7 +6,6 @@ import './style.sass'
 
 export const AQIBlock = () => {
   return (
-    
     <div className='aqi-block' >
       <div className='container' >
         <div>

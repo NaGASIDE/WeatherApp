@@ -6,13 +6,15 @@ import { Days } from '../../Days/Days'
 import { DayTemp } from '../../DayTemp/DayTemp'
 import { DayData } from '../../DayData/DayData'
 import { AQIBlock } from '../../AQIBlock/AQIBlock'
-import { useDispatch } from 'react-redux'
-import { cityActions } from '../../../store/City/action' 
+import { useSpring, animated } from 'react-spring'
 import './style.sass'
 
 export const Home = () => {
+
+  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
+
   return (
-    <div className='home' >
+    <animated.div className='home' style={props} >
       <Time />
       <Header />
       <Temp />
@@ -21,6 +23,6 @@ export const Home = () => {
       <DayData />
       <AQIBlock />
       <p className='footer' >Разработчик проекта <h3>nagaside</h3> </p> 
-    </div>
+    </animated.div>
   )
 }

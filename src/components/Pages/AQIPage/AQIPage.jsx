@@ -2,11 +2,15 @@ import React from 'react';
 import { Time } from '../../Time/Time'
 import { BsArrowLeft } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import { useSpring, animated } from 'react-spring'
 import './style.sass'
 
 export const AQIPage = () => {
+
+  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
+
   return (
-    <div className='add-city' >
+    <animated.div className='add-city' style={props} >
       <Time />
         <Link to='/' >
           <button className='add-city-button' >
@@ -21,6 +25,6 @@ export const AQIPage = () => {
           <a>Подробнее  о качестве воздуха </a>
         </div>
         <p className='footer' >Разработчик проекта <h3>nagaside</h3> </p> 
-    </div>
+    </animated.div>
   )
 }

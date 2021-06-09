@@ -5,5 +5,5 @@ export const cityActionTypes = {
 
 export const cityActions = {
   addCity: (city) => ({type: cityActionTypes.ADD_CITY, payload: city }),
-  deleteTodo: (cityId) => ({type: cityActionTypes.DELETE_CITY, payload:cityId })
+  deleteCity: (cityId) => ({type: cityActionTypes.DELETE_CITY, payload:cityId })
 }

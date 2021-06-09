@@ -14,8 +14,8 @@ function getClock(date) {
  function findIcon(iconId) {
   if (iconId === ``) {return icons[0]}
   let id = iconId.substring(0, iconId.length - 1)
-  const icons = [<GiPlainCircle className='day-temp-item-icon' />,            <FaCloudSun className='day-temp-item-icon' />,           <BsCloudFill className='day-temp-item-icon' />, 
-                 <BsFillCloudFill className='day-temp-item-icon' />,     <FaCloudShowersHeavy className='day-temp-item-icon' />,  <FaCloudSunRain className='day-temp-item-icon' />, 
+  const icons = [<GiPlainCircle className='day-temp-item-icon' />,     <FaCloudSun className='day-temp-item-icon' />,          <BsCloudFill className='day-temp-item-icon' />, 
+                 <BsFillCloudFill className='day-temp-item-icon' />,    <FaCloudShowersHeavy className='day-temp-item-icon' />, <FaCloudSunRain className='day-temp-item-icon' />, 
                  <RiThunderstormsFill className='day-temp-item-icon' />, <FaSnowflake className='day-temp-item-icon' />,          <RiMistFill className='day-temp-item-icon' />]
   const iconIds = [`01`,`02`,`03`,`04`,`09`,`10`,`11`,`13`,`50`]
 
