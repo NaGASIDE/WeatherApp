@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/WeatherApp/static/css/main.f389d297.chunk.css",
+    "main.js": "/WeatherApp/static/js/main.86a13a6b.chunk.js",
+    "main.js.map": "/WeatherApp/static/js/main.86a13a6b.chunk.js.map",
+    "runtime-main.js": "/WeatherApp/static/js/runtime-main.2bbe3ee8.js",
+    "runtime-main.js.map": "/WeatherApp/static/js/runtime-main.2bbe3ee8.js.map",
+    "static/js/2.d2b1355c.chunk.js": "/WeatherApp/static/js/2.d2b1355c.chunk.js",
+    "static/js/2.d2b1355c.chunk.js.map": "/WeatherApp/static/js/2.d2b1355c.chunk.js.map",
+    "index.html": "/WeatherApp/index.html",
+    "static/css/main.f389d297.chunk.css.map": "/WeatherApp/static/css/main.f389d297.chunk.css.map",
+    "static/js/2.d2b1355c.chunk.js.LICENSE.txt": "/WeatherApp/static/js/2.d2b1355c.chunk.js.LICENSE.txt",
+    "static/media/style.sass": "/WeatherApp/static/media/oblaka.97d99cae.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2bbe3ee8.js",
+    "static/js/2.d2b1355c.chunk.js",
+    "static/css/main.f389d297.chunk.css",
+    "static/js/main.86a13a6b.chunk.js"
+  ]
+}
