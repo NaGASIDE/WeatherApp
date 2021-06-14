@@ -1,11 +1,10 @@
 import React from 'react';
-import { Time } from '../../Time/Time'
-import { Header } from '../../Header/Header'
-import { Temp } from '../../Temp/Temp'
-import { Days } from '../../Days/Days'
-import { DayTemp } from '../../DayTemp/DayTemp'
-import { DayData } from '../../DayData/DayData'
-import { AQIBlock } from '../../AQIBlock/AQIBlock'
+import { Header } from './Header/Header'
+import { Temp } from './Temp/Temp'
+import { Days } from './Days/Days'
+import { DayTemp } from './DayTemp/DayTemp'
+import { DayData } from './DayData/DayData'
+import { AQIBlock } from './AQIBlock/AQIBlock'
 import { useSpring, animated } from 'react-spring'
 import './style.sass'
 
@@ -15,7 +14,6 @@ export const Home = () => {
 
   return (
     <animated.div className='home' style={props} >
-      <Time />
       <Header />
       <Temp />
       <Days />

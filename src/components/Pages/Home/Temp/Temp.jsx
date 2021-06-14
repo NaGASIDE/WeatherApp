@@ -1,6 +1,5 @@
-import axios  from 'axios'
-import React, { useState, useEffect } from 'react'
-import { AQI } from './AQI/AQI'
+import React from 'react'
+import { AQI } from './AQI/AQI';
 import { IoIosArrowForward } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'

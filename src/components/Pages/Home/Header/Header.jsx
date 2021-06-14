@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { FiMoreVertical } from 'react-icons/fi'
-import { Modal } from '../../UIKit/Modal/Modal'
+import { Modal } from '../../../../UIKit/Modal/Modal'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './style.sass'

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Time } from '../../Time/Time'
 import { BsArrowLeft } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
@@ -11,7 +10,6 @@ export const AQIPage = () => {
 
   return (
     <animated.div className='add-city' style={props} >
-      <Time />
         <Link to='/' >
           <button className='add-city-button' >
             <BsArrowLeft />

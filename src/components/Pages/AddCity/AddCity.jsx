@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Time } from '../../Time/Time'
 import { BsArrowLeft } from 'react-icons/bs'
 import { City } from './City/City'
 import { Link } from 'react-router-dom'
@@ -20,7 +19,6 @@ export const AddCity = () => {
 
   return (
     <animated.div className='add-city' style={props} >
-      <Time />
         <Link to='/' >
           <button className='add-city-button' >
             <BsArrowLeft />

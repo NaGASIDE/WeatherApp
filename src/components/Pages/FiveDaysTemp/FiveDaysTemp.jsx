@@ -1,6 +1,5 @@
 import React from 'react'
 import { FDay } from './FDay/FDay'
-import { Time } from '../../Time/Time'
 import { Link } from 'react-router-dom'
 import { BsArrowLeft } from 'react-icons/bs'
 import { useSelector } from 'react-redux'
@@ -13,7 +12,6 @@ export const FiveDaysTemp = () => {
 
   return (
     <animated.div className='five-days-temp' style={props} >
-      <Time />
       <Link to='/' >
         <button className='add-city-button' >
           <BsArrowLeft />
